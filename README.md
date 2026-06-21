@@ -1,2 +1,48 @@
-# NetUtil-Portable
-A lightweight, portable system monitoring and network diagnostic utility for Windows. Includes source code and pre-compiled binaries for educational and administrative use. Useful for testing process injection and security tooling.
+# SysMonitor-Lite
+
+## 📜 Overview
+**SysMonitor-Lite** is a lightweight, open-source Windows utility designed for real-time system monitoring and basic network diagnostics. It provides a simple command-line interface to view active processes, network connections, and system resource usage.
+
+This project is intended for:
+- **System Administrators:** Quick diagnostics on servers where heavy GUI tools are not permitted.
+- **Security Researchers:** A known-good, harmless binary for testing antivirus heuristics, process injection, and behavioral analysis tools.
+- **Educational Use:** Learning how Windows API calls for process and network enumeration work.
+
+> **⚠️ Disclaimer:** This tool is for educational and administrative purposes only. Use responsibly. The author is not responsible for misuse of this software.
+
+## 📂 Repository Structure
+
+| File/Folder | Description |
+| :--- | :--- |
+| `/src` | Full source code (C/C++) for the utility. |
+| `/bin` | **Pre-compiled, ready-to-use binaries (x64).** |
+| `/docs` | Documentation on API usage and security considerations. |
+| `LICENSE` | MIT License. |
+
+## 🚀 Usage
+
+### Downloading the Binary
+Pre-compiled binaries are available in the `/bin` directory or via the [Releases page](https://github.com/YOUR_USERNAME/SysMonitor-Lite/releases).
+
+1. Navigate to the `/bin` folder.
+2. Download `SysMonitor.exe`.
+3. Run the executable. No installation required.
+
+### Building from Source
+To build from source:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/SysMonitor-Lite.git
+   🔍 Technical Details
+Platform: Windows 10/11 (x64)
+Compiler: MSVC v143 (Static Linking)
+Dependencies: None (Static linked against Windows SDK)
+Signature: Binaries are unsigned (for testing purposes).
+🛡️ Security & Antivirus
+This utility makes low-level Windows API calls (e.g., EnumProcesses, GetNetworkParams) which may trigger false positives in some antivirus software.
+Why? These API calls are similar to those used by both legitimate admin tools and malware.
+Solution: If you are a security researcher, add an exclusion for this directory. If you are a regular user, verify the source code in /src to confirm its harmless nature.
+📄 License
+This project is licensed under the MIT License. You are free to use, modify, and distribute these files.
+
+Note: This repository is maintained for educational and research purposes. If you find bugs or have suggestions, please open an issue.
